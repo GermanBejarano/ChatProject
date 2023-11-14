@@ -42,6 +42,90 @@
 * [Ejecución](#Ejecución)
 * [Dockerización](#Dockerización)
 
+## :Diagramas.
+-Estos son los diagramas que representan la arquitectura y el flujo de datos del sistema.
+
+`Diagrama de Arquitectura:`
+Este diagrama muestra la estructura general del sistema, incluyendo los componentes principales y cómo se comunican entre sí.
+
+El Cliente Web se conecta al Servidor Node.js a través de HTTP para la carga inicial de la página.
+Una vez cargada la página, se establece una conexión bidireccional persistente a través de Socket.io para permitir la comunicación en tiempo real entre el cliente y el servidor.
+El Servidor Node.js gestiona la lógica del chat y comunica los mensajes entre los clientes conectados.
+La Base de Datos almacena la información del chat, como mensajes y usuarios.
+
++-----------------+            +-----------------------+            +-------------------+
+|                 |            |                       |            |                   |
+|   Cliente Web   +<---------->+   Servidor Node.js   +<---------->+   Base de Datos    |
+|                 |   HTTP     |   con Socket.io       |   DB       |    (MongoDB)      |
++-----------------+            +-----------------------+            +-------------------+
+            |                               |
+            +-------------------------------+
+                        Socket.io
+
+                        
+
+`Diagrama de Flujo:`
+
+Este diagrama muestra el flujo de acciones y eventos en el sistema, desde la carga inicial de la página hasta el intercambio de mensajes en tiempo real.
+
+El Cliente Web carga la página, establece una conexión WebSocket con el Servidor Node.js a través de Socket.io.
+Cuando un usuario envía un mensaje, el cliente lo envía al servidor.
+El Servidor Node.js recibe el mensaje y lo retransmite a todos los clientes conectados.
+La Base de Datos puede ser consultada para almacenar o recuperar mensajes.
+
+
+
++----------------------+         +----------------------+
+|                      |  Mensaje|                      |
+|   Cliente HTML/CSS   +-------->+   Servidor Node.js   |
+|                      |         |                      |
++----------------------+         +----------------------+
+                                |         |
+                                |  Socket |
+                                |  IO     |
+                                |         |
+                                +---------+
+                                      |
+                                      v
+                            +----------------------+
+                            |                      |
+                            |        BD            |
+                            |                      |
+                            +----------------------+
+
+
+                            
+`Diagrama de Secuencia:`
+
+Muestra la interacción entre los diferentes componentes del sistema en secuencia temporal, desde el envío de un mensaje por parte del cliente hasta su almacenamiento en la base de datos y la transmisión a otros clientes.
+
+
+
+
+         +-------------------------+
+         |                         |
+         |                         |
+         V                         |
++------------------+      +---------------------+      +------------------+
+|   Cliente Web    |      | Node.js (Socket.io) |      |   Base de Datos  |
++--------+---------+      +---------------------+      +------------------+
+         |                         |                           |
+         v                         v                           |
++------------------+      +---------------------+              |
+|  Enviar Mensaje  |      | Manejar Conexiones  |              |
+|     a Socket.io  |      |   y Mensajes con    |              |
++--------+---------+      |   Socket.io         |              |
+         |                +---------------------+              |
+         v                        |                            |
++------------------+              |                            |
+|  Recibir Mensaje |              |                            |
+|   de Socket.io   |              |                            |
++------------------+              |                            |
+                                  |                            |
+                                  | Guardar Mensaje en DB      |
+                                  | y Actualizar Interfaz      |
+                                  +----------------------------+
+
 
 ## :hammer:Funcionalidades del proyecto
 
@@ -65,3 +149,6 @@
 
 > [!IMPORTANT]
 > Para que ejecute la aplicacion sin problema hay que tener en cuenta las versiones de los lenguajes y frameworks utilizados
+
+
+
