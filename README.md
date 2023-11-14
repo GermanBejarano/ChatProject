@@ -42,7 +42,7 @@
 * [Ejecución](#Ejecución)
 * [Dockerización](#Dockerización)
 
-## :Diagramas.
+## Diagramas:
 -Estos son los diagramas que representan la arquitectura y el flujo de datos del sistema.
 
 `Diagrama de Arquitectura:`
@@ -128,19 +128,19 @@ La Base de Datos puede ser consultada para almacenar o recuperar mensajes.
          v
 +---------------------+
 |     Base de Datos   |
-|       (SQL)         |
+|                     |
 +---------------------+
          |
          v
 +---------------------+
 |  Actualizar Estado  |
-|   del Chat en Todos  |
+|   del Chat en Todos |
 +---------------------+
          |
          v
 +---------------------+
-|   Actualizar Interfaz|
-|   para Todos         |
+|  Actualizar Interfaz|
+|   para Todos        |
 +---------------------+
          |
          v
@@ -161,29 +161,69 @@ Muestra la interacción entre los diferentes componentes del sistema en secuenci
 <pre>
 <code>
 
-         +-------------------------+
-         |                         |
-         |                         |
-         V                         |
-+------------------+      +---------------------+      +------------------+
-|   Cliente Web    |      | Node.js (Socket.io) |      |   Base de Datos  |
-+--------+---------+      +---------------------+      +------------------+
-         |                         |                           |
-         v                         v                           |
-+------------------+      +---------------------+              |
-|  Enviar Mensaje  |      | Manejar Conexiones  |              |
-|     a Socket.io  |      |   y Mensajes con    |              |
-+--------+---------+      |   Socket.io         |              |
-         |                +---------------------+              |
-         v                        |                            |
-+------------------+              |                            |
-|  Recibir Mensaje |              |                            |
-|   de Socket.io   |              |                            |
-+------------------+              |                            |
-                                  |                            |
-                                  | Guardar Mensaje en DB      |
-                                  | y Actualizar Interfaz      |
-                                  +----------------------------+
++----------------------+        +---------------------+        +---------------------+       +----------------------+
+|        Usuario       |        | Cliente HTML/CSS   |        |   Cliente con        |       |       Servidor       |
+|                      |        | (Interfaz)          |        |      Socket         |       | (Node.js con Socket.io)|
++----------------------+        +---------------------+        +---------------------+       +----------------------+
+         |                               |                                |                                |
+         |                               |                                |                                |
+         |                               |                                |                                |
+         |                               |                                |                                |
+         +-------- "Conexión al Chat" ---->|                              |                                |
+         |                               |                                |                                |
+         |                               |                                |                                |
+         |                               |                                |                                |
+         +-------- "Interacción en la    |                                |                                |
+         |           Interfaz"           |                                |                                |
+         |                               |                                |                                |
+         |                               |                                |                                |
+         |                               +--- "Envío de Mensaje" -------> |                                |
+         |                               |                                |                                |
+         |                               |                                |                                |
+         |                               +--- "Recepción de Mensaje" ---->|                                |
+         |                               |                                |                                |
+         |                               |                                |                                |
+         |                               +--- "Almacenar en Base de Datos"----->|                          |
+         |                               |                                |                                |
+         |                               |                                |                                |
+         |                               |                                |                                |
+         |                               |                                |                                |
+         |                               |                                |                                |
+         |                               |                                |                                |
+         |                               |                                |                                |
+         |                               |                                |                                |
+         |                               |                                |                                |
+         |                               |                                |                                |
+         |                               |                                |                                |
+         |                               |                                |                                |
+         |                               |                                |                                |
+         |                               |                                |                                |
+         |                               |                                |                                |
+         |                               |                                |                                |
+         |                               |                                |                                |
+         |                               |                                |                                |
+         +----- "Actualización en Tiempo |                                |                                |
+                |  Real de la Interfaz"  |                                |                                |
+                |                        |                                |                                |
+                +<--- "Actualización de  |                                |                                |
+                                         |  la Interfaz para Todos"       |                                |
+                                         |                                |                                |
+                                         +<--- "Actualización de Estado   |                                |
+                                         |   del Chat para Todos"         |                                |
+                                         |                                |                                |
+                                         +-------------------------------->|                               |
+                                         |                                |                                |
+                                         |                                +<--- "Envío a Cliente" ---------|
+                                         |                                |                                |
+                                         |                                +<--- "Envío a Cliente" ---------|
+                                         |                                |                                |
+                                         |                                +<--- "Envío a Cliente" ---------|
+                                         |                                |                                |
+                                         |                                +<--- "Envío a Cliente" ---------|
+                                         |                                |                                |
+                                         +<--- "Fin del Proceso" ---------|                                |
+                          
+
 
 
 </code>
