@@ -80,7 +80,8 @@ El Servidor Node.js recibe el mensaje y lo retransmite a todos los clientes cone
 La Base de Datos puede ser consultada para almacenar o recuperar mensajes.
 
 
-8
+<pre>
+<code>
 +----------------------+         +----------------------+
 |                      |  Mensaje|                      |
 |   Cliente HTML/CSS   +-------->+   Servidor Node.js   |
@@ -100,11 +101,17 @@ La Base de Datos puede ser consultada para almacenar o recuperar mensajes.
                             +----------------------+
 
 
+</pre>
+</code>
+
+
                             
 `Diagrama de Secuencia:`
 
 Muestra la interacción entre los diferentes componentes del sistema en secuencia temporal, desde el envío de un mensaje por parte del cliente hasta su almacenamiento en la base de datos y la transmisión a otros clientes.
 
+<pre>
+<code>
 
          +-------------------------+
          |                         |
@@ -129,6 +136,10 @@ Muestra la interacción entre los diferentes componentes del sistema en secuenci
                                   | Guardar Mensaje en DB      |
                                   | y Actualizar Interfaz      |
                                   +----------------------------+
+
+
+</code>
+</pre>
 
 
 ## :hammer:Funcionalidades del proyecto
