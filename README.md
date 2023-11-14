@@ -53,6 +53,10 @@ Una vez cargada la página, se establece una conexión bidireccional persistente
 El Servidor Node.js gestiona la lógica del chat y comunica los mensajes entre los clientes conectados.
 La Base de Datos almacena la información del chat, como mensajes y usuarios.
 
+
+<pre>
+<code>
+
 +-----------------+            +-----------------------+            +-------------------+
 |                 |            |                       |            |                   |
 |   Cliente Web   +<---------->+   Servidor Node.js   +<---------->+   Base de Datos    |
@@ -61,8 +65,10 @@ La Base de Datos almacena la información del chat, como mensajes y usuarios.
             |                               |
             +-------------------------------+
                         Socket.io
+                                                
+</code>
+</pre>
 
-                        
 
 `Diagrama de Flujo:`
 
@@ -74,7 +80,7 @@ El Servidor Node.js recibe el mensaje y lo retransmite a todos los clientes cone
 La Base de Datos puede ser consultada para almacenar o recuperar mensajes.
 
 
-
+8
 +----------------------+         +----------------------+
 |                      |  Mensaje|                      |
 |   Cliente HTML/CSS   +-------->+   Servidor Node.js   |
@@ -98,8 +104,6 @@ La Base de Datos puede ser consultada para almacenar o recuperar mensajes.
 `Diagrama de Secuencia:`
 
 Muestra la interacción entre los diferentes componentes del sistema en secuencia temporal, desde el envío de un mensaje por parte del cliente hasta su almacenamiento en la base de datos y la transmisión a otros clientes.
-
-
 
 
          +-------------------------+
