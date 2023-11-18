@@ -37,10 +37,45 @@
 
 * [Introducción](#Introducción)
 * [Descripción del proyecto](#descripción-del-proyecto)
+* [Requerimientos](#requerimientos)
 * [Diagramas](#Diagramas)
 * [Funcionalidades](#Funcionalidades)
 * [Ejecución](#Ejecución)
 * [Dockerización](#Dockerización)
+
+
+## Introducción
+
+## Descripción del proyecto
+
+## Requerimientos
+
+### REQUERIMIENTOS FUNCIONALES Y NO FUNCIONALES
+
+Este proyecto consiste en el desarrollo de un aplicativo (chat) que permita el envió de datos en tiempo real, siempre y cuando se de correctamente el proceso de validación de los usuarios. 
+
+Descripción de los requerimientos funcionales y no funcionales.
+
+Formato de la tabla de especificación de los requerimientos:
+
+
+|  Código del requerimiento     |       |
+| ----------------------------- | ----- |
+| Nombre del requerimiento      | 2 - 3 | 
+| Descripción del requerimiento | 4 - 5 | 
+| Datos de entrada              | 6 - 7 | 
+| Resultados                    | 8 - 9 | 
+| Prioridad                     | 8 - 9 | 
+
+
+
+|  Código del requerimiento     |       |
+| ----------------------------- | ----- |
+| Nombre del requerimiento      | 2 - 3 | 
+| Descripción del requerimiento | 4 - 5 | 
+| Datos de entrada              | 6 - 7 | 
+| Resultados                    | 8 - 9 | 
+| Prioridad                     | 8 - 9 | 
 
 ## Diagramas:
 -Estos son los diagramas que representan la arquitectura y el flujo de datos del sistema.
