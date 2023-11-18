@@ -79,6 +79,14 @@ Formato de la tabla de especificación de los requerimientos:
 | Resultados                    | 8 - 9 | 
 | Prioridad                     | 8 - 9 | 
 
+|  Código del requerimiento     |       |
+| ----------------------------- | ----- |
+| Nombre del requerimiento      | 2 - 3 | 
+| Descripción del requerimiento | 4 - 5 | 
+| Datos de entrada              | 6 - 7 | 
+| Resultados                    | 8 - 9 | 
+| Prioridad                     | 8 - 9 | 
+
 ## Diagramas:
 -Estos son los diagramas que representan la arquitectura y el flujo de datos del sistema.
 
