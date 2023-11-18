@@ -42,7 +42,8 @@
 * [Funcionalidades](#Funcionalidades)
 * [Ejecución](#Ejecución)
 * [Dockerización](#Dockerización)
-* [Dockerización](#Dockerización)
+* [Manuales](#Manuales)
+
 
 
 ## Introducción
