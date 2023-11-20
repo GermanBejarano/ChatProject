@@ -57,21 +57,23 @@ El proyecto "Sistema de Chat en Tiempo Real" tiene como objetivo proporcionar un
 **Conexión Instantánea:**
 
 - Permitir a los usuarios conectarse al sistema de chat de manera rápida y sin complicaciones.
-`Interfaz Intuitiva:`
+- Interfaz Intuitiva:
 
 - Ofrecer una interfaz de usuario intuitiva y atractiva, desarrollada con HTML y CSS, que garantice una experiencia de usuario positiva.
 Comunicación en Tiempo Real:
 
 - Facilitar la comunicación instantánea entre usuarios a través de la implementación de Socket.io para la transmisión de mensajes en tiempo real.
-Persistencia de Datos:
+  
+`Persistencia de Datos:`
 
 - Almacenar de manera segura y eficiente los mensajes y datos de usuario en una base de datos SQL para garantizar la continuidad de las conversaciones.
 Escalabilidad:
 
 - Diseñar el sistema para ser escalable, permitiendo la gestión efectiva de un creciente número de usuarios y mensajes.
-Seguridad:
+  
+`Seguridad:`
 
--Implementar medidas de seguridad robustas para proteger la integridad de los datos y garantizar la privacidad de los usuarios.
+- Implementar medidas de seguridad robustas para proteger la integridad de los datos y garantizar la privacidad de los usuarios.
 
 **Beneficios Esperados:**
 
@@ -87,16 +89,16 @@ Colaboración en Tiempo Real:
  
 `Adaptabilidad:`
 
--Brindar una plataforma adaptable que pueda integrarse con futuras tecnologías y requisitos.
+- Brindar una plataforma adaptable que pueda integrarse con futuras tecnologías y requisitos.
 
 **Stakeholders:**
 `Desarrolladores:`
 
-Contribuirán al desarrollo y mantenimiento del sistema.
+- Contribuirán al desarrollo y mantenimiento del sistema.
 
 `Usuarios Finales:`
 
--Utilizarán el sistema para la comunicación en tiempo real.
+- Utilizarán el sistema para la comunicación en tiempo real.
 
 `Gerencia de Proyecto:`
 
@@ -105,8 +107,9 @@ Contribuirán al desarrollo y mantenimiento del sistema.
 `Operaciones:`
 
 - Gestionarán la implementación y mantenimiento del sistema en producción.
-Alcance del Proyecto:
-El alcance del proyecto incluye el diseño, desarrollo, implementación y mantenimiento del sistema de chat en tiempo real. Se abordarán los siguientes aspectos:
+  
+**Alcance del Proyecto:**
+- El alcance del proyecto incluye el diseño, desarrollo, implementación y mantenimiento del sistema de chat en tiempo real. Se abordarán los siguientes aspectos:
 
 **Registro de usuarios y autenticación.**
 
