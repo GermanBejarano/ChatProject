@@ -50,6 +50,85 @@
 
 ## Descripción del proyecto
 
+**Visión General:**
+El proyecto "Sistema de Chat en Tiempo Real" tiene como objetivo proporcionar una plataforma de mensajería instantánea que permita a los usuarios conectarse y comunicarse en tiempo real. El sistema utilizará tecnologías como Node.js, Socket.io, SQL, HTML y CSS para ofrecer una experiencia de usuario fluida y eficiente.
+
+**Objetivos del Proyecto:**
+**Conexión Instantánea:**
+
+- Permitir a los usuarios conectarse al sistema de chat de manera rápida y sin complicaciones.
+`Interfaz Intuitiva:`
+
+- Ofrecer una interfaz de usuario intuitiva y atractiva, desarrollada con HTML y CSS, que garantice una experiencia de usuario positiva.
+Comunicación en Tiempo Real:
+
+- Facilitar la comunicación instantánea entre usuarios a través de la implementación de Socket.io para la transmisión de mensajes en tiempo real.
+Persistencia de Datos:
+
+- Almacenar de manera segura y eficiente los mensajes y datos de usuario en una base de datos SQL para garantizar la continuidad de las conversaciones.
+Escalabilidad:
+
+- Diseñar el sistema para ser escalable, permitiendo la gestión efectiva de un creciente número de usuarios y mensajes.
+Seguridad:
+
+-Implementar medidas de seguridad robustas para proteger la integridad de los datos y garantizar la privacidad de los usuarios.
+
+**Beneficios Esperados:**
+
+`Comunicación Eficiente:`
+
+- Mejorar la eficiencia de la comunicación entre usuarios, permitiendo interacciones más rápidas y directas.
+Experiencia de Usuario Mejorada:
+
+- Proporcionar una interfaz de usuario atractiva y fácil de usar, mejorando la satisfacción del usuario.
+Colaboración en Tiempo Real:
+
+- Facilitar la colaboración en proyectos y grupos al proporcionar una plataforma de chat en tiempo real.
+ 
+`Adaptabilidad:`
+
+-Brindar una plataforma adaptable que pueda integrarse con futuras tecnologías y requisitos.
+
+**Stakeholders:**
+`Desarrolladores:`
+
+Contribuirán al desarrollo y mantenimiento del sistema.
+
+`Usuarios Finales:`
+
+-Utilizarán el sistema para la comunicación en tiempo real.
+
+`Gerencia de Proyecto:`
+
+- Supervisará el progreso y la entrega del proyecto.
+  
+`Operaciones:`
+
+- Gestionarán la implementación y mantenimiento del sistema en producción.
+Alcance del Proyecto:
+El alcance del proyecto incluye el diseño, desarrollo, implementación y mantenimiento del sistema de chat en tiempo real. Se abordarán los siguientes aspectos:
+
+**Registro de usuarios y autenticación.**
+
+- Interfaz de usuario atractiva y fácil de usar.
+- Funcionalidades de chat en tiempo real utilizando Socket.io.
+- Almacenamiento persistente de mensajes en una base de datos SQL.
+- Implementación de medidas de seguridad para proteger la privacidad y la integridad de los datos.
+  
+**Restricciones y Limitaciones:**
+- El proyecto se desarrollará en un marco de tiempo definido.
+- Los recursos, tanto humanos como tecnológicos, estarán limitados según los requisitos del proyecto.
+  
+**Entregables Esperados:**
+
+- Código fuente del sistema.
+- Documentación completa del código y del sistema.
+- Guías de implementación y operación.
+- Interfaz de usuario funcional y atractiva.
+- Sistema desplegado y en funcionamiento.
+
+
+
 ## Requerimientos
 
 ### REQUERIMIENTOS FUNCIONALES Y NO FUNCIONALES
