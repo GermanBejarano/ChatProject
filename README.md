@@ -54,7 +54,9 @@
 El proyecto "Sistema de Chat en Tiempo Real" tiene como objetivo proporcionar una plataforma de mensajería instantánea que permita a los usuarios conectarse y comunicarse en tiempo real. El sistema utilizará tecnologías como Node.js, Socket.io, SQL, HTML y CSS para ofrecer una experiencia de usuario fluida y eficiente.
 
 **Objetivos del Proyecto:**
-**Conexión Instantánea:**
+
+
+`Conexión Instantánea:`
 
 - Permitir a los usuarios conectarse al sistema de chat de manera rápida y sin complicaciones.
 - Interfaz Intuitiva:
