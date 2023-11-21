@@ -85,7 +85,7 @@
 
 ## Descripción
 
-El proyecto "Sistema de Chat en Tiempo Real" tiene como objetivo proporcionar una plataforma de mensajería instantánea que permita a los usuarios conectarse y comunicarse en tiempo real. El sistema utilizará tecnologías como Node.js, Socket.io, SQL, HTML y CSS para ofrecer una experiencia de usuario fluida y eficiente.
+El proyecto "Sistema de Chat en Tiempo Real" tiene como objetivo proporcionar una plataforma de mensajería instantánea que permita a los usuarios conectarse y comunicarse en tiempo real. El sistema utilizará tecnologías como Node.js, Socket.io, SQL, HTML y CSS para ofrecer una experiencia de usuario fluida y eficiente, esto con el fin de mantener comunicados a las personas que utilicen este chat tomándolo como una herramienta corporativa, que pueda desvincular cualquier servicio de mensajería de uso personal y su comunicación sea a través de esta herramienta.
 
 ## Objetivos
 
@@ -138,6 +138,7 @@ El alcance del proyecto incluye el diseño, desarrollo, implementación y manten
 #### Registro de usuarios y autenticación
 
 - Interfaz de usuario atractiva y fácil de usar.
+- Autenticación de cada usuario con credenciales para mayor seguridad y confidencialidad de los datos.
 - Funcionalidades de chat en tiempo real utilizando Socket.io.
 - Almacenamiento persistente de mensajes en una base de datos SQL.
 - Implementación de medidas de seguridad para proteger la privacidad y la integridad de los datos.
