@@ -391,6 +391,23 @@ Este diagrama muestra cómo los diferentes componentes de software y hardware de
 
 <img width="auto" src="./assets/img/DiagramaDesplegueChat.png"><br/>
 
+### Historias de Usuario
+
+| ID DE HISTORIA DE USUARIO                         | Como  <tipo de usuario>     | Quiero  <realizar alguna tarea>                                                               | para que pueda  <el logro algún objetivo>                              |
+| ------------------------------------------------- | --------------------------- | --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| 1: Registro de Usuario                            | usuario nuevo               | poder registrarme en el sistema                                                               | acceso al chat y participar en conversaciones.                         |
+| 2: Autenticación de Usuario                       | usuario registrado          | iniciar sesión con mis credenciales                                                           | acceder al sistema y utilizar las funciones de chat.                   |
+| 3: Crear una Nueva Conversación                   |  usuario conectado al chat  | poder iniciar una nueva conversación                                                          | comunicarme con otros usuarios sobre un tema específico.               |
+| 4: Enviar Mensajes en Tiempo Real                 | usuario en una conversación | enviar mensajes en tiempo real                                                                | comunicarme de manera instantánea con otros participantes.             |
+| 5: Ver Mensajes Antiguos                          | usuario en una conversación | poder ver mensajes antiguos                                                                   | ponerme al día con la conversación y no perder información relevante   |
+| 6: Almacenar Conversaciones Antiguas              |  usuario del sistema        | que las conversaciones antiguas se almacenen de forma persistente                             | poder acceder y revisar conversaciones anteriores en cualquier momento |
+| 7: Personalizar Perfil                            | usuario registrado          | personalizar mi perfil con una foto y una descripción                                         | que otros usuarios puedan conocerme mejor.                             |
+|  8: Notificaciones de Mensajes Nuevos             | usuario en el sistema       | recibir notificaciones cuando haya mensajes nuevos en las conversaciones en las que participo | mantenerme actualizado y no perder información importante.             |
+| 9: Seguridad de la Conversación                   | usuario del sistema         | que mis conversaciones sean seguras y privadas                                                | garantizar la confidencialidad de la información intercambiada.        |
+| 10: Eliminar Mensajes                             | usuario en una conversación | poder eliminar mensajes enviados                                                              | Para corregir errores o retirar información sensible.                  |
+| 11: Integración de Emoticones y Archivos Adjuntos | usuario en una conversación | poder enviar emoticones y archivos adjuntos                                                   | enriquecer mis mensajes y expresar mejor mis ideas.                    |
+| 12: Historial de Actividad del Usuario            | Como usuario del sistema    | Quiero poder revisar mi historial de actividad, incluyendo mensajes enviados y recibidos      | Para recordar conversaciones y seguir mi participación.                |
+
 
 ## :hammer:Arquitectura del Sistema
 
