@@ -126,13 +126,11 @@ Colaboración en Tiempo Real:
 
 ## Stakeholders
 
-|   Tipo    |       |
-| -------------------- | ----- |
-| Desarrolladores      | Contribuirán al desarrollo y mantenimiento del sistema. | 
-| Usuarios Final       | Utilizarán el sistema para la comunicación en tiempo real | 
-| Gerencia de Proyecto | Supervisará el progreso y la entrega del proyecto | 
-| Operaciones          | Gestionarán la implementación y mantenimiento del sistema en producción. | 
+- Equipo de Desarrollo: Responsable de la implementación y mejora continua del sistema.
 
+- Usuarios Finales: Aquellos que utilizarán el sistema para la comunicación en tiempo real.
+
+- Equipo de Operaciones: Encargado del despliegue y mantenimiento del sistema en entornos de producción.
   
 ## Alcance
 El alcance del proyecto incluye el diseño, desarrollo, implementación y mantenimiento del sistema de chat en tiempo real. Se abordarán los siguientes aspectos:
