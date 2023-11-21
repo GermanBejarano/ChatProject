@@ -72,7 +72,7 @@
   - [Diagrama de Flujo](#diagrama-de-flujo)
   - [Diagrama de Secuencia](#diagrama-de-secuencia)
   - [Diagrama de despliegue](#diagrama-de-despliegue) 
-  - [Historias de usuario](#historias-de-usuario)
+- [Historias de usuario](#historias-de-usuario)
 - [:hammer:Arquitectura del Sistema](#hammerarquitectura-del-sistema)
   - [Backend](#backend)
   - [Frontend](#frontend)
