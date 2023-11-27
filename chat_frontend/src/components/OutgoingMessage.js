@@ -1,6 +1,7 @@
 import React from 'react'
 import { horaMes } from '../helpers/horaMes'
 
+// Componente que muestra los mensajes salientes
 export const OutgoingMessage = ({ msg }) => {
     return (
         <div className="outgoing_msg">

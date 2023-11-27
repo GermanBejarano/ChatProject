@@ -11,15 +11,12 @@ const initialState = {
     email: null,
 };
 
-
 export const AuthProvider = ({ children }) => {
 
-    const [ auth, setAuth ] = useState(initialState)
+    const [ auth, setAuth ] = useState(initialState);
 
     const login = async( email, password ) => {
-
         const resp = await fetchSinToken('login', { email, password }, 'POST');
-
         if ( resp.ok ) {
             localStorage.setItem('token', resp.token );
             const { usuario } = resp;
@@ -33,13 +30,10 @@ export const AuthProvider = ({ children }) => {
             });
 
         }
-
         return resp.ok;
-
     }
 
     const register = async(nombre, email, password) => {
-
         const resp = await fetchSinToken('login/new', { nombre, email, password }, 'POST');
         
         if ( resp.ok ) {
@@ -56,9 +50,7 @@ export const AuthProvider = ({ children }) => {
 
             return true;
         }
-
         return resp.msg;
-
     }
 
     const verificaToken = useCallback( async() => {
