@@ -66,21 +66,27 @@
     - [Entregables Esperados](#entregables-esperados)
 - [Requerimientos](#requerimientos)
   - [Funcionales](#funcionales)
-  - [No Funcionales](#no-funcionales)
+    - [Código del requerimiento:](#código-del-requerimiento)
+    - [Nombre del requerimiento:](#nombre-del-requerimiento)
+    - [Descripción del requerimiento:](#descripción-del-requerimiento)
+    - [Datos de entrada:](#datos-de-entrada)
+    - [Datos de salida:](#datos-de-salida)
+  - [Requerimientos Funcionales](#requerimientos-funcionales)
+  - [Requerimientos No Funcionales](#requerimientos-no-funcionales)
 - [Diagramas](#diagramas)
   - [Diagrama de Arquitectura](#diagrama-de-arquitectura)
   - [Diagrama de Flujo](#diagrama-de-flujo)
   - [Diagrama de Secuencia](#diagrama-de-secuencia)
-  - [Diagrama de despliegue](#diagrama-de-despliegue) 
-- [Historias de usuario](#historias-de-usuario)
-- [:hammer:Arquitectura del Sistema](#hammerarquitectura-del-sistema)
+  - [Diagrama de despliegue](#diagrama-de-despliegue)
+  - [Historias de Usuario](#historias-de-usuario)
+- [Arquitectura del Sistema](#arquitectura-del-sistema)
   - [Backend](#backend)
   - [Frontend](#frontend)
-- [:white\_check\_mark:Requisitos](#white_check_markrequisitos)
-- [:gear:Configuración del entorno y ejecución](#gearconfiguración-del-entorno-y-ejecución)
+- [Requisitos](#requisitos)
+- [Configuración del entorno y ejecución](#configuración-del-entorno-y-ejecución)
 - [Uso del sistema](#uso-del-sistema)
 - [Pruebas](#pruebas)
-- [:medal\_sports:Ejecución con docker](#medal_sportsejecución-con-docker)
+- [Ejecución con docker](#ejecución-con-docker)
 - [Manuales](#manuales)
 
 
@@ -517,7 +523,7 @@ Este diagrama muestra cómo los diferentes componentes de software y hardware de
 | 12: Historial de Actividad del Usuario            | Como usuario del sistema    | Quiero poder revisar mi historial de actividad, incluyendo mensajes enviados y recibidos      | Para recordar conversaciones y seguir mi participación.                |
 
 
-## :hammer:Arquitectura del Sistema
+## Arquitectura del Sistema
 
 ### Backend
 
@@ -567,7 +573,7 @@ Estructura de carpetas del frontend:
 </code>
 </pre>
 
-## :white_check_mark:Requisitos
+## Requisitos
 
 > [!IMPORTANT]
 > Para que ejecute la aplicacion sin problema hay que tener en cuenta las versiones de los lenguajes y frameworks utilizados
@@ -579,7 +585,7 @@ Estructura de carpetas del frontend:
 - ***Docker***
 
 
-## :gear:Configuración del entorno y ejecución
+## Configuración del entorno y ejecución
 
 Si se quiere probar el proyecto o realizar modificaciones antes de ejecutar la imagen del contenedor con docker o por el simple hecho de probar que todo esta funcionando correctamente de manera local se debe seguir los siguientes pasos para su debida configuracion y ejecucion:
 
@@ -606,14 +612,32 @@ Si se quiere probar el proyecto o realizar modificaciones antes de ejecutar la i
 
 ## Uso del sistema
 
-- Registro y autenticación
-- Interfaz de usuario
-- Envio de mensajes
-- Modificacion n
+- **Login**
+  
+  Al ingresar a la pagina del chat la primera interfaz con la que se va a encontrar el usuario es el login, en el cual los usuarios que ya tengan cuenta podran ingresar con su email y contraseña o si el usuario marco la opcion de _Recordarme_ los datos guardados apareceran en los campos respectivos.
 
-## Pruebas 
+  Ambos campos son obligatorios, si no cumplen con los requisitos el boton _Ingresar_ no se habilitara o en el caso que ingrese mal las credenciales el sistema arrojara se respectiva alerta.
 
-## :medal_sports:Ejecución con docker
+  Si el usuario no esta registrado podra hacerlo dando click en el boton _Registrarse_ ubicado en la parte derecha de la sección del formulario.
+
+  <img width="auto" src="./assets/img/SignIn.png"><br/>
+
+- **Registro**
+  
+  Para registrarse un usuario solo tendra que completar un formulario con tres sencillos datos: el nombre, el email y la contraseña, todos los campos son obligatorios y de igual forma solo se habilitara el boton _Registrarme_ si cummple con todos los requisitos.
+
+  Si el usuario ya esta registrado y quiere ingresar podra hacerlo dando click en el boton _Ingresar_ ubicado en la parte izquierda de la seccion del formulario.
+
+  <img width="auto" src="./assets/img/SignUp.png"><br/>
+
+- **Completar registro**
+- **Interfaz de usuario**
+- **Envio de mensajes**
+- **Modificacion de datos**
+
+## Pruebas
+
+## Ejecución con docker
 
 ## Manuales
 

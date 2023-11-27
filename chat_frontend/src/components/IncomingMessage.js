@@ -1,6 +1,7 @@
 import React from 'react'
 import { horaMes } from '../helpers/horaMes'
 
+// Componente que muestra los mensajes entrantes
 export const IncomingMessage = ({ msg }) => {
 
     return (
