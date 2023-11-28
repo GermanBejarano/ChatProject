@@ -141,6 +141,7 @@ Colaboración en Tiempo Real:
   
 ## Alcance
 
+<div class=text-justify>
 Con el avance exponencial de la tecnología y diferentes herramientas de comunicación, nacen diferentes posibilidades de comunicarse. De ahí, se fortalece la idea de crear un chat en tiempo real, esto con el fin de optimizar y mejorar el tiempo en el que se genera una  conversación con personas del mismo entorno. Chat en tiempo real, es una herramienta que permite, establecer una comunicación eficáz y oportuna de forma inmediata. Hoy por hoy, uno de los aspectos más importante a tener en cuenta es el Tiempo, con chat en tiempo real, se da una solución exitosa, que permitirá el aprovechamiento del tiempo de una forma más óptima. También se piensa en una forma rápida, pero a la vez asertiva y atractiva de interactuar con más personas.
 
 Chat en tiempo real, incluye el diseño, desarrollo, implementación y mantenimiento de un sistema de chat en tiempo real, de uso empresarial, el cual permitir enviar y recibir mensaje de forma isntantanea, entre los usuarios autorizados. 
@@ -171,7 +172,7 @@ en este desarrollo se abordarán los siguientes aspectos:
 
 Este proyecto consiste en el desarrollo de un aplicativo (chat) que permita el envió de datos en tiempo real, siempre y cuando se de correctamente el proceso de validación de los usuarios. 
 
-
+<div>
 
 ## Requerimientos
 
