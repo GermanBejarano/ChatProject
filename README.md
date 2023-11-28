@@ -140,7 +140,14 @@ Colaboración en Tiempo Real:
 - Equipo de Operaciones: Encargado del despliegue y mantenimiento del sistema en entornos de producción.
   
 ## Alcance
-El alcance del proyecto incluye el diseño, desarrollo, implementación y mantenimiento del sistema de chat en tiempo real. Se abordarán los siguientes aspectos:
+
+Con el avance exponencial de la tecnología y diferentes herramientas de comunicación, nacen diferentes posibilidades de comunicarse. De ahí, se fortalece la idea de crear un chat en tiempo real, esto con el fin de optimizar y mejorar el tiempo en el que se genera una  conversación con personas del mismo entorno. Chat en tiempo real, es una herramienta que permite, establecer una comunicación eficáz y oportuna de forma inmediata. Hoy por hoy, uno de los aspectos más importante a tener en cuenta es el Tiempo, con chat en tiempo real, se da una solución exitosa, que permitirá el aprovechamiento del tiempo de una forma más óptima. También se piensa en una forma rápida, pero a la vez asertiva y atractiva de interactuar con más personas.
+
+Chat en tiempo real, incluye el diseño, desarrollo, implementación y mantenimiento de un sistema de chat en tiempo real, de uso empresarial, el cual permitir enviar y recibir mensaje de forma isntantanea, entre los usuarios autorizados. 
+
+Chat en tiempo real, comprende los procesos necesarios para asegurar que la comunicación, incluya todas las herramientas necesarias para para poder interactuar de forma sencilla. Esto falicitará el envio de mensajes y la respuesta oportuna a diferentes necesidades de los usuarios.  la aplicación estará disponible 7 días a la semana durate 12 horas diurnas, contará con una interfaz sencilla y de fácil manejo, de igual forma será compatible con navgadores chrom y firefox, las herramientas utilizadas en el desarrollo frontend son Javascript, HTML,CSS, ReactJS en el backend nos encontraremos con ...., al ser una aplicacion contenerizada presentan un nivel de seguridad alto, ya que puede ejecutarse como procesos aislados y pueden funcionar de forma independiente de otros contenedores. 
+
+en este desarrollo se abordarán los siguientes aspectos:
 
 #### Registro de usuarios y autenticación
 
@@ -162,9 +169,9 @@ El alcance del proyecto incluye el diseño, desarrollo, implementación y manten
 - Interfaz de usuario funcional y atractiva.
 - Sistema desplegado y en funcionamiento.
 
-
-
 Este proyecto consiste en el desarrollo de un aplicativo (chat) que permita el envió de datos en tiempo real, siempre y cuando se de correctamente el proceso de validación de los usuarios. 
+
+
 
 ## Requerimientos
 
