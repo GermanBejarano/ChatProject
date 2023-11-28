@@ -419,6 +419,9 @@ La Base de Datos puede ser consultada para almacenar o recuperar mensajes.
 
 Muestra la interacción entre los diferentes componentes del sistema en secuencia temporal, desde el envío de un mensaje por parte del cliente hasta su almacenamiento en la base de datos y la transmisión a otros clientes.
 
+
+<img width="auto" src="./assets/img/DiagramaSecuencia.png"><br/>
+
 <pre>
 <code>
 
