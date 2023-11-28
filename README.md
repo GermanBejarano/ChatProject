@@ -324,21 +324,6 @@ El Servidor Node.js gestiona la lógica del chat y comunica los mensajes entre l
 La Base de Datos almacena la información del chat, como mensajes y usuarios.
 
 <img width="auto" src="./assets/img/DiagramaArquitectura.png"><br/>
-<pre>
-<code>
-
-+-----------------+            +-----------------------+            +-------------------+
-|                 |            |                       |            |                   |
-|   Cliente Web   +<---------->+   Servidor Node.js   +<---------->+   Base de Datos    |
-|                 |   HTTP     |   con Socket.io       |   DB       |    (MongoDB)      |
-+-----------------+            +-----------------------+            +-------------------+
-            |                               |
-            +-------------------------------+
-                        Socket.io
-                                                
-</code>
-</pre>
-
 
 ### Diagrama de Flujo
 
