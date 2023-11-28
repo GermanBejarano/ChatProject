@@ -335,78 +335,7 @@ El Servidor Node.js recibe el mensaje y lo retransmite a todos los clientes cone
 La Base de Datos puede ser consultada para almacenar o recuperar mensajes.
 
 
-<pre>
-<code>
-
-+---------------------+
-|      Inicio         |
-+---------------------+
-         |
-         v
-+---------------------+
-|  Usuario Conectado  |
-|    al Chat          |
-+---------------------+
-         |
-         v
-+---------------------+
-|   Cliente HTML/CSS  |
-|     (Interfaz)      |
-+---------------------+
-         |
-         v
-+---------------------+
-|   Evento de Chat    |
-|   (Escribir/Mandar) |
-+---------------------+
-         |
-         v
-+---------------------+
-|  Cliente con Socket  |
-|    (Envía al         |
-|    Servidor)         |
-+---------------------+
-         |
-         v
-+---------------------+
-|     Servidor        |
-|   Node.js con        |
-|   Socket.io          |
-+---------------------+
-         |
-         v
-+---------------------+
-| Gestionar Mensajes  |
-|   y Usuarios        |
-+---------------------+
-         |
-         v
-+---------------------+
-|     Base de Datos   |
-|                     |
-+---------------------+
-         |
-         v
-+---------------------+
-|  Actualizar Estado  |
-|   del Chat en Todos |
-+---------------------+
-         |
-         v
-+---------------------+
-|  Actualizar Interfaz|
-|   para Todos        |
-+---------------------+
-         |
-         v
-+---------------------+
-|  Fin del Proceso    |
-+---------------------+
-
-
-</pre>
-</code>
-
+<img width="auto" src="./assets/img/DiagramaFlujo.png"><br/>
 
                             
 ### Diagrama de Secuencia
