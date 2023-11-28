@@ -323,7 +323,7 @@ Una vez cargada la página, se establece una conexión bidireccional persistente
 El Servidor Node.js gestiona la lógica del chat y comunica los mensajes entre los clientes conectados.
 La Base de Datos almacena la información del chat, como mensajes y usuarios.
 
-
+<img width="auto" src="./assets/img/DiagramaArquitectura.png"><br/>
 <pre>
 <code>
 
