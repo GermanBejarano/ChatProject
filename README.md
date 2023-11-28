@@ -205,103 +205,180 @@ Prioridad: describe su nivel de importancia. Alta, media  o baja.
 ### Requerimientos Funcionales
 
 | Código del requerimiento      | RF-01                                                                                |
-| ----------------------------- | -----                                                                                |
+| ----------------------------- | -------------------------------------------------------------------------------------|
 | Nombre del requerimiento      | Registro de usuarios                                                                 | 
 | Descripción del requerimiento | El usuario deberá diligenciar un formulario, el cual contiene datos personales como: |
-------------------------------- | nombre, correo electrónico, teléfono, contraseña (este dato debe ser escrito 2 veces,|
-------------------------------- | para su comprobación), cuando ya se haya diligenciado el formulario se envia y se    |
-------------------------------- | realizan validaciones en el servidor de base de datos donde se confirma que el       |
-------------------------------- | usuario no existe y que los datos son válidos, de esta forma se puede registrar.     |
-------------------------------- | Del mismo modo, se generan notificaciones en caso de que algún dato sea erroneo.     |
+|                               | nombre, correo electrónico, teléfono, contraseña (este dato debe ser escrito 2 veces,|
+|                               | para su comprobación), cuando ya se haya diligenciado el formulario se envia y se    |
+|                               | realizan validaciones en el servidor de base de datos donde se confirma que el       |
+|                               | usuario no existe y que los datos son válidos, de esta forma se puede registrar.     |
+|                               | Del mismo modo, se generan notificaciones en caso de que algún dato sea erroneo.     |
 | Datos de entrada              | nombre, correo electrónico, teléfono, contraseña                                     | 
 | Resultados                    | Registro de usuario exitoso                                                          | 
 | Prioridad                     | Alta                                                                                 | 
 
 
+
 | Código del requerimiento      | RF-02                                                                                |
-| ----------------------------- | -----                                                                                |
+| ----------------------------- | -------------------------------------------------------------------------------------|
 | Nombre del requerimiento      | Modificación de usuario                                                              | 
 | Descripción del requerimiento | El usuario podrá modificar los datos registrados con anterioridad, siempre y cuando  |
-------------------------------- | se validen los datos en la base de datos, se deben ingresar datos como datos         |
-------------------------------- | personales como: nombre, correo electrónico, teléfono, contraseña (este dato debe    |
-------------------------------- | ser escrito 2 veces, para su comprobación).                                          |
+|                               | se validen los datos en la base de datos, se deben ingresar datos como datos         |
+|                               | personales como: nombre, correo electrónico, teléfono, contraseña (este dato debe    |
+|                               | ser escrito 2 veces, para su comprobación).                                          |
 | Datos de entrada              | nombre, correo electrónico, teléfono, contraseña                                     | 
 | Resultados                    | Usuario modificado exitosamente                                                      | 
-| Prioridad                     | Baja                                                                                 | 
-
-
-| Código del requerimiento      | RF-04                                                                                |
-| ----------------------------- | -----                                                                                |
-| Nombre del requerimiento      | Ingreso de usuarios                                                                  | 
-| Descripción del requerimiento | Los usuarios ya registrados y autenticados podrán ingresar a la interfaz de usuarios |
-------------------------------- | resgistrados y autenticados.                                                         |
-| Datos de entrada              | datos de usuarios                                                                    | 
-| Resultados                    | Se mostrará la interfaz de usuarios registrados                                      | 
-| Prioridad                     | media                                                                                |
-
-
-| Código del requerimiento      | RF-05                                                                                |
-| ----------------------------- | -----                                                                                |
-| Nombre del requerimiento      | Ingreso automático de usuarios                                                       | 
-| Descripción del requerimiento | Los usuarios ya registrados y autenticados podrán guardar sus datos, para que el     |  
-------------------------------- | siguiente inicio de sesión lo pueda hacer de forma automatica solo registrando la    |
-------------------------------- | opción guardar datos de inicio.                                                      |
-| Datos de entrada              | usuario, contraseña                                                                  | 
-| Resultados                    | Se ingresa automaticamente                                                           | 
-| Prioridad                     | media                                                                                |
-
-
-| Código del requerimiento      | RF-06                                                                                |
-| ----------------------------- | -----                                                                                |
-| Nombre del requerimiento      | Selección de usuarios                                                                | 
-| Descripción del requerimiento | Los usuarios ya registrados y autenticados podrán verificar los datos de los otros   |
-------------------------------- | usuarios, seleccionarlos para poder enviar un mensaje.                               |
-| Datos de entrada              | selección de usuarios                                                                | 
-| Resultados                    | Dirige el usuario a la interfaz de envio de mensajes                                 | 
-| Prioridad                     | Media                                                                                | 
-
-
-| Código del requerimiento      | RF-07                                                                                |
-| ----------------------------- | -----                                                                                |
-| Nombre del requerimiento      | Enviar mensajes                                                                      | 
-| Descripción del requerimiento | Los usuarios ya registrados y autenticados podrán escribir y enviar mensajes de      |
-------------------------------- | texto, los cuales pueden incluir letras, números y símbolos.                         |
-| Datos de entrada              | números, letras, simbolos                                                            | 
-| Resultados                    | El mensaje se enviará al usuario seleccionado                                        | 
 | Prioridad                     | Alta                                                                                 | 
 
 
-| Código del requerimiento      | RF-08                                                                                |
-| ----------------------------- | -----                                                                                |
+
+| Código del requerimiento      | RF-03                                                                                |
+| ----------------------------- | -------------------------------------------------------------------------------------|
+| Nombre del requerimiento      | Ingreso de usuarios                                                                  | 
+| Descripción del requerimiento | Los usuarios ya registrados y autenticados podrán ingresar a la interfaz de usuarios |
+|                               | resgistrados y autenticados.                                                         |
+| Datos de entrada              | datos de usuarios                                                                    | 
+| Resultados                    | Se mostrará la interfaz de usuarios registrados                                      | 
+| Prioridad                     | Alta                                                                                 |
+
+
+
+| Código del requerimiento      | RF-04                                                                                |
+| ----------------------------- | -------------------------------------------------------------------------------------|
+| Nombre del requerimiento      | Ingreso automático de usuarios                                                       | 
+| Descripción del requerimiento | Los usuarios ya registrados y autenticados podrán guardar sus datos, para que el     |  
+|                               | siguiente inicio de sesión lo pueda hacer de forma automatica solo registrando la    |
+|                               | opción guardar datos de inicio.                                                      |
+| Datos de entrada              | usuario, contraseña                                                                  | 
+| Resultados                    | Se ingresa automaticamente                                                           | 
+| Prioridad                     | Alta                                                                                 |
+
+
+
+| Código del requerimiento      | RF-05                                                                                |
+| ----------------------------- | -------------------------------------------------------------------------------------|
+| Nombre del requerimiento      | Selección de usuarios                                                                | 
+| Descripción del requerimiento | Los usuarios ya registrados y autenticados podrán verificar los datos de los otros   |
+|                               | usuarios, seleccionarlos para poder enviar un mensaje.                               |
+| Datos de entrada              | selección de usuarios                                                                | 
+| Resultados                    | Dirige el usuario a la interfaz de envio de mensajes                                 | 
+| Prioridad                     | Alta                                                                                 | 
+
+
+
+| Código del requerimiento      | RF-06                                                                                |
+| ----------------------------- | -------------------------------------------------------------------------------------|
+| Nombre del requerimiento      | Enviar mensajes                                                                      | 
+| Descripción del requerimiento | Los usuarios ya registrados y autenticados podrán escribir y enviar mensajes de      |
+|                               | texto, los cuales pueden incluir letras, números y símbolos.                         |
+| Datos de entrada              | números, letras, simbolos                                                            | 
+| Resultados                    | El mensaje se enviará al usuario seleccionado                                        | 
+| Prioridad                     | Alta                                                                                 |
+
+
+
+| Código del requerimiento      | RF-07                                                                                |
+| ----------------------------- | -------------------------------------------------------------------------------------|
 | Nombre del requerimiento      | Recibir mensajes                                                                     | 
 | Descripción del requerimiento | Los usuarios ya registrados y autenticados podrán recibir los mensajes enviados por  |
-------------------------------- | otros usuarios registrados y autenticados.                                           |
+|                               | otros usuarios registrados y autenticados.                                           |
 | Datos de entrada              | N/A                                                                                  | 
 | Resultados                    | visualiza los mensajes que ha recibido                                               | 
 | Prioridad                     | Alta                                                                                 | 
 
 
-| Código del requerimiento      | RF-09                                                                                |
-| ----------------------------- | -----                                                                                |
+
+| Código del requerimiento      | RF-08                                                                                |
+| ----------------------------- | -------------------------------------------------------------------------------------|
 | Nombre del requerimiento      | Cierre de sesión                                                                     | 
 | Descripción del requerimiento | Los usuarios ya registrados y autenticados podrán cerrar la sesión cuando ya no      |
-------------------------------- | hagan uso del chat.                                                                  |
+|                               | hagan uso del chat.                                                                  |
 | Datos de entrada              | N/A                                                                                  | 
 | Resultados                    | cerró sesión exitosamente                                                            | 
 | Prioridad                     | Alta                                                                                 | 
 
 
+
 ### Requerimientos No Funcionales
 
-RNF-01 Validar estado de los usuarios
-RNF-02 Cantidad de texto permitido
-RNF-03 Generar alertas (pendiente)
-RNF-04 disponibilidad 24/7
-RNF-05 Interfaz amigable 
-RNF-06 Compatibilidad (Chrome, firefox)
-RNF-07 manual de usuario
-RNF-08 Manual técnico
 
+| Código del requerimiento      | RNF-01                                                                               |
+| ----------------------------- | -----                                                                                |
+| Nombre del requerimiento      | Validar estado de los usuarios                                                       | 
+| Descripción del requerimiento | El sistema permite visualizar el estado actual de los usuarios (activo o inactivo).  |
+| Resultados                    | Visualización de usuarios activos o inactivos                                        | 
+| Prioridad                     | Alta                                                                                 | 
+
+
+
+| Código del requerimiento      | RNF-02                                                                               |
+| ----------------------------- | -------------------------------------------------------------------------------------|
+| Nombre del requerimiento      | Cantidad de texto permitido                                                          | 
+| Descripción del requerimiento | El sistema permite limitar la cantidad de texto que los usuarios ingresen en cada msj|
+| Datos de entrada              | letras, números, caracteres                                                          | 
+| Resultados                    | Notificación de limite de caracteres                                                 | 
+| Prioridad                     | Alta                                                                                 |
+
+
+
+| Código del requerimiento      | RNF-03                                                                               |
+| ----------------------------- | -------------------------------------------------------------------------------------|
+| Nombre del requerimiento      | Generar alertas (pendiente)                                                          | 
+| Descripción del requerimiento | El sistema permite generar alertas o notificación según el uso del mismo,            |
+|                               | restricciones o limitaciones de uso.                                                 |
+| Resultados                    | Notificación de uso o solicitud de datos correctos.                                  | 
+| Prioridad                     | Alta                                                                                 |
+
+
+
+| Código del requerimiento      | RNF-04                                                                               |
+| ----------------------------- | -------------------------------------------------------------------------------------|
+| Nombre del requerimiento      | Disponibilidad 12/5                                                                  | 
+| Descripción del requerimiento | El sistema estará disponible 12/5, Permite en ingreso en horario laboral de lunes a  |
+|                               | viernes durante 12 horas diurnas.                                                    |
+| Resultados                    | Permitir el ingreso en el horario designado                                          | 
+| Prioridad                     | Alta                                                                                 |
+
+
+
+| Código del requerimiento      | RNF-05                                                                               |
+| ----------------------------- | -------------------------------------------------------------------------------------|
+| Nombre del requerimiento      | Interfaz amigable                                                                    | 
+| Descripción del requerimiento | El diseño de la interfaz es amigable, esto con el fin de que los usuarios puedan     |
+|                               | tener contacto con ella de una forma rápida y sencilla.                              |
+| Resultados                    | Interfaz de fácil uso                                                                | 
+| Prioridad                     | Media                                                                                |
+
+
+
+| Código del requerimiento      | RNF-06                                                                               |
+| ----------------------------- | -------------------------------------------------------------------------------------|
+| Nombre del requerimiento      | Compatibilidad (Chrome, firefox)                                                     | 
+| Descripción del requerimiento | El sistema sera compatible con los navegadores chrome y firefox, por ende los        |
+|                               | usuarios deben ingresar inicialmente a cualquiera de estos navegadores para hacer    |
+|                               | uso del mismo e inciar su proceso de registro.                                       |
+| Resultados                    | Despliegue en los navegadores Chrome y firefox                                       | 
+| Prioridad                     | Alta                                                                                 |
+
+
+
+| Código del requerimiento      | RNF-07                                                                               |
+| ----------------------------- | -------------------------------------------------------------------------------------|
+| Nombre del requerimiento      | Manual de usuario                                                                    | 
+| Descripción del requerimiento | Estarán disponibles los manueales de usuario, con el fin de hacer un correcto uso del|
+|                               | sistema.                                                                             |
+| Resultados                    | Visualización de los manuales de usuario.                                            | 
+| Prioridad                     | Alta                                                                                 |
+
+
+
+| Código del requerimiento      | RNF-08                                                                               |
+| ----------------------------- | -------------------------------------------------------------------------------------|
+| Nombre del requerimiento      | Manual técnico                                                                       | 
+| Descripción del requerimiento | Estarán disponibles los manueales de técnico, con el fin de hacer un correcto uso del|
+|                               | sistema.                                                                             |
+| Resultados                    | Visualización de los manuales de Técnicos.                                           | 
+| Prioridad                     | Alta                                                                                 |
 
 
 
