@@ -1,0 +1,58 @@
+version: '3.1'
+
+services:
+
+  mongo_chat:
+    container_name: ${MONGO_DB_NAME}
+    image: mongo:6.0
+    restart: always
+    volumes:
+      - db_vol:/data/db
+    ports:
+      - "27030:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
+    # command: ['--auth']
+
+  mongo-express:
+    depends_on:
+      - mongo_chat
+    image: mongo-express:1.0.0-alpha.4
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: ${MONGO_USERNAME}
+      ME_CONFIG_MONGODB_ADMINPASSWORD: ${MONGO_PASSWORD}
+      ME_CONFIG_MONGODB_SERVER: ${MONGO_DB_NAME}
+    ports:
+      - 8081:8081
+    restart: always  
+  
+  back_chat:
+    container_name: backend
+    depends_on:
+      - mongo_chat
+    image: germanbejarano13/chat_back:1.0.0
+    ports:
+      - "${BACK_PORT}:8080"
+    environment:
+      DB_USER: ${MONGO_USERNAME}
+      DB_PASS: ${MONGO_PASSWORD}
+      DB_CNN_STRING: mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_DB_NAME}:27017/chatdb?authSource=admin
+      JWT_KEY: ${JWT_KEY}
+      PORT: ${BACK_PORT}
+    
+
+  front_chat:
+    container_name: frontend
+    depends_on:
+      - back_chat
+    image: germanbejarano13/chat_front:1.0.0
+    ports:
+      - "${FRONT_PORT}:3000"
+    environment:
+      REACT_APP_API_URL: http://${MONGO_DB_NAME}:8080/api
+    
+volumes:
+  db_vol:
+    external: false
+      
