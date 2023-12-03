@@ -50,7 +50,8 @@ jobs:
         context: .
         file: ./chat_backend/Dockerfile 
         push: true
-        tags: germanbejarano13/chat_back${{NEW_VERSION}}
+        tags: |
+          germanbejarano13/chat_back:${{NEW_VERSION}}
         
     
 
