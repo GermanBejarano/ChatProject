@@ -47,7 +47,7 @@ jobs:
       env: 
         NEW_VERSION: ${{ steps.version.outputs.version }}
       with:
-        context: .
+        context: ./chat_backend
         file: ./chat_backend/Dockerfile 
         push: true
         tags: germanbejarano13/chat_back:${{ steps.version.outputs.version }}
