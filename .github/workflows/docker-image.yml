@@ -35,13 +35,6 @@ jobs:
         docker login -u $DOCKER_USER -p $DOCKER_PASS
         echo "New version: $NEW_VERSION"
 
-    # - name: Build Docker Image - Backend
-    #   env:
-    #     NEW_VERSION: ${{ steps.version.outputs.version }}
-    #   run: |
-    #     docker build -t germanbejarano13/chat_back:$NEW_VERSION .
-    #     docker build -t germanbejarano13/chat_back:latest .
-
     - name: Build and push Docker Image - Backend
       uses: docker/build-push-action@v2
       env: 
@@ -51,8 +44,14 @@ jobs:
         file: ./chat_backend/Dockerfile 
         push: true
         tags: germanbejarano13/chat_back:${{ steps.version.outputs.version }}
-        
-    
 
-    # - name: Build the Docker image
-    #   run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+    - name: Build and push Docker Image - Frontend
+      uses: docker/build-push-action@v2
+      env: 
+        NEW_VERSION: ${{ steps.version.outputs.version }}
+      with:
+        context: ./chat_frontend
+        file: ./chat_frontend/Dockerfile 
+        push: true
+        tags: germanbejarano13/chat_front:${{ env.NEW_VERSION }}
+        
