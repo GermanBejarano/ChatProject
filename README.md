@@ -108,81 +108,74 @@ Para la segunta etapa se implementara, funciones tales como: modificación del p
 
 ## Objetivos
 
-
-`Conexión Instantánea:`
-
-- Permitir a los usuarios conectarse al sistema de chat de manera rápida y sin complicaciones.
-
+- Diseñar una plataforma de chat en tiempo real, que permita a los usuarios conectarse forma rápida y sin complicaciones.
 - Ofrecer una interfaz de usuario intuitiva y atractiva, desarrollada con reactjs, que garantice una experiencia de usuario positiva.
-
 - Facilitar la comunicación instantánea entre usuarios a través de la implementación de Socket.io para la transmisión de mensajes en tiempo real.
-  
-`Persistencia de Datos:`
-
-- Almacenar de manera segura y eficiente los mensajes y datos de usuario en una base de datos SQL para garantizar la continuidad de las conversaciones.
-
-- Diseñar el sistema para ser escalable, permitiendo la gestión efectiva de un creciente número de usuarios y mensajes.
-  
-`Seguridad:`
-
+- Almacenar de manera segura y eficiente los mensajes y datos de usuario en una base de datos MongoDb para garantizar la continuidad de las conversaciones.
 - Implementar medidas de seguridad robustas para proteger la integridad de los datos y garantizar la privacidad de los usuarios.
 
 **Beneficios Esperados:**
 
 `Comunicación Eficiente:`
-
 - Mejorar la eficiencia de la comunicación entre usuarios, permitiendo interacciones más rápidas y directas.
-Experiencia de Usuario Mejorada:
 
+`Experiencia de Usuario Mejorada:`
 - Proporcionar una interfaz de usuario atractiva y fácil de usar, mejorando la satisfacción del usuario.
-Colaboración en Tiempo Real:
 
+`Colaboración en Tiempo Real:`
 - Facilitar la colaboración en proyectos y grupos al proporcionar una plataforma de chat en tiempo real.
  
 `Adaptabilidad:`
-
 - Brindar una plataforma adaptable que pueda integrarse con futuras tecnologías y requisitos.
 
-## Stakeholders
 
-- Equipo de Desarrollo: Responsable de la implementación y mejora continua del sistema.
+### Matriz de Stakeholders
 
+- Desarrollador: Responsable de la implementación y mejora continua del sistema.
+- Propietarios del software: Responsable de disponer los recursos para el desarrollo del sistema.
 - Usuarios Finales: Aquellos que utilizarán el sistema para la comunicación en tiempo real.
 
-- Equipo de Operaciones: Encargado del despliegue y mantenimiento del sistema en entornos de producción.
+<p align="center">
+  <a href="https://github.com/GermanBejarano/ChatProject">
+    <!-- <img width="160px" src="https://i.imgur.com/JIyBtKW.png"><br/> -->
+    <img width="160px" src="C:\Users\IS BRAAL\Desktop\img_cindy\Stakeholders_Desarrollador.png"><br/>
+    <img width="160px" src="C:\Users\IS BRAAL\Desktop\img_cindy\Stakeholders_propietario.png"><br/>
+    <img width="160px" src="C:\Users\IS BRAAL\Desktop\img_cindy\Stakeholders_usuario.png"><br/>
+  </a>
+ </p>
+
   
 ## Alcance
 
 <div class=text-justify>
-Con el avance exponencial de la tecnología y diferentes herramientas de comunicación, nacen diferentes posibilidades de comunicarse. De ahí, se fortalece la idea de crear un chat en tiempo real, esto con el fin de optimizar y mejorar el tiempo en el que se genera una  conversación con personas del mismo entorno. Chat en tiempo real, es una herramienta que permite, establecer una comunicación eficáz y oportuna de forma inmediata. Hoy por hoy, uno de los aspectos más importante a tener en cuenta es el Tiempo, con chat en tiempo real, se da una solución exitosa, que permitirá el aprovechamiento del tiempo de una forma más óptima. También se piensa en una forma rápida, pero a la vez asertiva y atractiva de interactuar con más personas.
 
-Chat en tiempo real, incluye el diseño, desarrollo, implementación y mantenimiento de un sistema de chat en tiempo real, de uso empresarial, el cual permitir enviar y recibir mensaje de forma isntantanea, entre los usuarios autorizados. 
-
-Chat en tiempo real, comprende los procesos necesarios para asegurar que la comunicación, incluya todas las herramientas necesarias para para poder interactuar de forma sencilla. Esto falicitará el envio de mensajes y la respuesta oportuna a diferentes necesidades de los usuarios.  la aplicación estará disponible 7 días a la semana durate 12 horas diurnas, contará con una interfaz sencilla y de fácil manejo, de igual forma será compatible con navgadores chrom y firefox, las herramientas utilizadas en el desarrollo frontend son Javascript, HTML,CSS, ReactJS en el backend nos encontraremos con ...., al ser una aplicacion contenerizada presentan un nivel de seguridad alto, ya que puede ejecutarse como procesos aislados y pueden funcionar de forma independiente de otros contenedores. 
+Con el avance exponencial de la tecnología, constantemente nacen nuevas herramientas que facilitan la comunicación. De ahí, se fortalece la idea de crear un chat en tiempo real, esto con el fin de optimizar el tiempo y  facilitar los medios de comunicación. Chat en tiempo real, es una herramienta de tipo empresarial, que pretende establecer una comunicación eficaz y oportuna. Hoy por hoy, uno de los aspectos más importante a tener en cuenta es el Tiempo, con chat en tiempo real, se da una solución exitosa, que permitirá el aprovechamiento del tiempo de una forma más efectiva. Chat en tiempo real, es un software que permite el registro, autenticación de usuarios, envío y recepción de mensajes en tiempo real. La aplicación estará disponible 7 días a la semana durante 12 horas diurnas, contará con una interfaz sencilla y de fácil manejo, de igual forma será compatible con navegadores chrome y firefox, El sistema utilizará tecnologías como Node.js, Socket.io, MongoDB, Reactjs, Tailwind CSS entre otras, al ser una aplicación contenerizada presentan un nivel de seguridad alto, ya que puede ejecutarse como procesos aislados y pueden funcionar de forma independiente de otros contenedores.
 
 en este desarrollo se abordarán los siguientes aspectos:
 
-#### Registro de usuarios y autenticación
+### Registro de usuarios y autenticación
 
 - Interfaz de usuario atractiva y fácil de usar.
 - Autenticación de cada usuario con credenciales para mayor seguridad y confidencialidad de los datos.
 - Funcionalidades de chat en tiempo real utilizando Socket.io.
-- Almacenamiento persistente de mensajes en una base de datos SQL.
-- Implementación de medidas de seguridad para proteger la privacidad y la integridad de los datos.
-  
-#### Restricciones y Limitaciones
-- El proyecto se desarrollará en un marco de tiempo definido.
+-	Almacenamiento persistente de mensajes en una base de datos mongo DB.
+-	Implementación de medidas de seguridad para proteger la privacidad y la integridad de los datos.
+
+### Restricciones y Limitaciones
+
+- El proyecto se desarrollará en un tiempo estimado de 6 meses, influyendo la fase de diseño, análisis, desarrollo y pruebas.
 - Los recursos, tanto humanos como tecnológicos, estarán limitados según los requisitos del proyecto.
-  
-#### Entregables Esperados
 
-- Código fuente del sistema.
-- Documentación completa del código y del sistema.
-- Guías de implementación y operación.
-- Interfaz de usuario funcional y atractiva.
-- Sistema desplegado y en funcionamiento.
 
-Este proyecto consiste en el desarrollo de un aplicativo (chat) que permita el envió de datos en tiempo real, siempre y cuando se de correctamente el proceso de validación de los usuarios. 
+### Entregables Esperados
+
+-	Código fuente del sistema.
+-	Documentación completa del código y del sistema.
+-	Guías de implementación y operación.
+-	Interfaz de usuario funcional y atractiva.
+-	Sistema desplegado y en funcionamiento.
+-	Manuales de usuario.
+
 
 <div>
 
