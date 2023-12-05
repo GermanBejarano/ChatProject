@@ -672,7 +672,7 @@ Debido a que era un requisito contenerizar el proyecto y que cualquier persona p
 
   Si se requiere probar la compilación de la imagen basado en el ***Dockerfile*** puede ejecutar el comando `docker build --tag germanbejarano13/chat_back:1.0.0 .` y para ejecutarla o implementarla de forma facil en el contenedor puede ejecutar `docker container run germanbejarano13/chat_back:1.0.0` aunque se debe tener en cuenta las variables de entorno nombradas en el item **Configuración del entorno y ejecución** ya que son necesarias.
 
-  Si quiere saber mas información sobre la imagen generada y como ejecutarla correctamente puede visitar el repositorio de la imagen en [Docker Hub](https://hub.docker.com/repository/docker/germanbejarano13/chat_back/general).
+  Si quiere saber mas información sobre la imagen generada y como ejecutarla correctamente puede visitar el repositorio de la imagen en [Docker Hub](https://hub.docker.com/r/germanbejarano13/chat_back).
 
 
 - ***`Dockerfile - chat_front`***
@@ -683,7 +683,7 @@ Debido a que era un requisito contenerizar el proyecto y que cualquier persona p
 
   Si se requiere probar la compilación de la imagen basado en el ***Dockerfile*** puede ejecutar los mismos comandos que la imagen anterior `docker build --tag germanbejarano13/chat_front:1.0.0 .` y para ejecutarla en el contenedor puede ejecutar `docker container run germanbejarano13/chat_front:1.0.0`, tambien se debe tener en cuenta las variables de entorno nombradas en el item **Configuración del entorno y ejecución** ya que son necesarias.
 
-  Si quiere saber mas información sobre la imagen generada y como ejecutarla correctamente puede visitar el repositorio de la imagen en [Docker Hub](https://hub.docker.com/repository/docker/germanbejarano13/chat_front/general).
+  Si quiere saber mas información sobre la imagen generada y como ejecutarla correctamente puede visitar el repositorio de la imagen en [Docker Hub](https://hub.docker.com/r/germanbejarano13/chat_front).
 
 
 - ***`Docker-Compose`***
@@ -694,8 +694,9 @@ Debido a que era un requisito contenerizar el proyecto y que cualquier persona p
 
   - [_Mongo_](https://hub.docker.com/_/mongo)
   - [_mongo-express_](https://hub.docker.com/_/mongo-express)
-  - [_germanbejarano13/chat_back_](https://github.com/GermanBejarano/ChatProject/blob/main/chat_frontend/Dockerfile)
-  - [_germanbejarano13/chat_front_](https://hub.docker.com/repository/docker/germanbejarano13/chat_front/general)
+  - [_germanbejarano13/chat_back_](https://hub.docker.com/r/germanbejarano13/chat_back)
+  - [_germanbejarano13/chat_front_](https://hub.docker.com/r/germanbejarano13/chat_front)
+
 
   > [!IMPORTANT]
   > La imagen de mongo-express no es necesaria para la ejecucion del proyecto, es solo una herramienta web que permite ver mas facilmente los datos de la base de datos.
