@@ -29,6 +29,29 @@ export const Login = () => {
         rememberme: false
     });
 
+
+    // Funcion que envia la informacion del formulario de login al backend
+    const onSubmit = async () => {
+        (values.rememberme)
+            ? localStorage.setItem('email', values.email)
+            : localStorage.removeItem('email');
+
+        const { email, password } = values;
+        const ok = await login(email, password);
+
+        if (!ok) {
+            Swal.fire('Error', 'Verifique el usuario y contraseña', 'error');
+        }
+    }
+
+    // Hook que ayuda a validar las restricciones de los campos
+    const { values, errors, setFieldValue, ...formik } = useFormik({
+        initialValues,
+        onSubmit,
+        validationSchema: loginSchema,
+    });
+
+
     // Hook que carga la informacion del localStorage si el usuario la guardo anteriormente
     useEffect(() => {
         const email = localStorage.getItem('email');
@@ -56,26 +79,6 @@ export const Login = () => {
         setFieldValue('rememberme', !values.rememberme);
     }
 
-    // Funcion que envia la informacion del formulario de login al backend
-    const onSubmit = async () => {
-        (values.rememberme)
-            ? localStorage.setItem('email', values.email)
-            : localStorage.removeItem('email');
-
-        const { email, password } = values;
-        const ok = await login(email, password);
-
-        if (!ok) {
-            Swal.fire('Error', 'Verifique el usuario y contraseña', 'error');
-        }
-    }
-
-    // Hook que ayuda a validar las restricciones de los campos
-    const { values, errors, setFieldValue, ...formik } = useFormik({
-        initialValues,
-        onSubmit,
-        validationSchema: loginSchema,
-    });
 
     return (
         <div className="form-container sign-in">

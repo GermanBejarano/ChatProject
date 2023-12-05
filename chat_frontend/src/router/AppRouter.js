@@ -6,10 +6,14 @@ import {
 } from 'react-router-dom';
 import { AuthContext } from '../auth/AuthContext';
 
-import { ChatPage } from '../pages/ChatPage';
 import { AuthRouter } from './AuthRouter';
+import { ChatRouter } from './ChatRouter';
 import { PublicRoute } from './PublicRoute';
 import { PrivateRoute } from './PrivateRoute';
+
+
+// Función padre que controla las rutas publicas y privadas del chat en base al  
+// parametro de autenticacion que se maneja por un token
 
 export const AppRouter = () => {
 
@@ -26,12 +30,9 @@ export const AppRouter = () => {
     return (
         <Router>
             <div>
-
                 <Switch>
-                    {/* <Route path="/auth" component={ AuthRouter } /> */}
                     <PublicRoute isAuthenticated={auth.logged} path="/auth" component={AuthRouter} />
-                    <PrivateRoute isAuthenticated={auth.logged} exact path="/" component={ChatPage} />
-
+                    <PrivateRoute isAuthenticated={auth.logged} path="/" component={ChatRouter} />
                     <Redirect to="/" />
                 </Switch>
             </div>

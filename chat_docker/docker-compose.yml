@@ -46,11 +46,12 @@ services:
     container_name: frontend
     depends_on:
       - back_chat
-    image: germanbejarano13/chat_front:1.0.0
+    image: germanbejarano13/chat_front:1.0.1
     ports:
       - "${FRONT_PORT}:3000"
     environment:
-      REACT_APP_API_URL: http://${MONGO_DB_NAME}:8080/api
+      REACT_APP_API_URL: http://localhost:${BACK_PORT}/api
+      REACT_APP_API_SOCKET: http://localhost:${BACK_PORT}
     
 volumes:
   db_vol:
