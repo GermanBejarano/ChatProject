@@ -85,14 +85,26 @@
 - [Requisitos](#requisitos)
 - [Configuración del entorno y ejecución](#configuración-del-entorno-y-ejecución)
 - [Uso del sistema](#uso-del-sistema)
-- [Pruebas](#pruebas)
-- [Ejecución con docker](#ejecución-con-docker)
-- [Manuales](#manuales)
+- [Docker](#docker)
+- [CI/CD](#cicd)
 
 
 ## Descripción
 
-El proyecto "Sistema de Chat en Tiempo Real" tiene como objetivo proporcionar una plataforma de mensajería instantánea que permita a los usuarios conectarse y comunicarse en tiempo real. El sistema utilizará tecnologías como Node.js, Socket.io, SQL, HTML y CSS para ofrecer una experiencia de usuario fluida y eficiente, esto con el fin de mantener comunicados a las personas que utilicen este chat tomándolo como una herramienta corporativa, que pueda desvincular cualquier servicio de mensajería de uso personal y su comunicación sea a través de esta herramienta.
+El proyecto "Sistema de Chat en Tiempo Real" tiene como objetivo proporcionar una plataforma de mensajería instantánea que permita a los usuarios conectarse y comunicarse en tiempo real. El sistema utilizará tecnologías como Node.js, Socket.io, MongoDB, Reactjs, Tailwind CSS entre otras, para ofrecer una experiencia de usuario fluida y eficiente, esto con el fin de mantener comunicados a las personas que utilicen este chat tomándolo como una herramienta corporativa, que pueda desvincular cualquier servicio de mensajería de uso personal y su comunicación sea a través de esta herramienta.
+
+Este proyecto se basa en el marco de trabajo agil Scrum, donde se prioriza la funcionalidad elemental para darle un producto rapido al cliente que lo pueda utilizar con efectividad y testear y a posteriori dar su feedback.
+
+Este proyecto se desarrollara en dos etapas, la primera tendra una duracion de 3 meses, la cual se dividira en 4 sprints de 3 semanas cada uno, en los cuales se ejecutara lo siguiente:
+
+- **Sprint 1**: Levantamiento de informacion, descripcion del proyecto, objetivos, se inicia el alcance.
+- **Sprint 2**: Se termina el alcance, se empieza a definir requerimientos funcionales y no funcionales, tambien se empieza a trabajar los diferentes diagramas.
+- **Sprint 3**: Se termina los puntos anteriores y se empieza a desarrollar el backend y el frontend en base a lo descrito anteriormente.
+- **Sprint 4**: Se finaliza el desarrollo y se conteneriza las imagenes y se implementa el CI/CD.
+
+Como se menciona anteriormente para entregar un producto rapidamente en esta primera etapa solo se desarrollara la parte de inicio de sesion, el registro del usuario y como tal el chat en tiempo real.
+
+Para la segunta etapa se implementara, funciones tales como: modificación del perfil del usuario, mejora de interfaz del chat, agregar opcion de cargue y envio de archivos, notificaciones y mejora del registro del usuario para mejorar la personalizacion.
 
 ## Objetivos
 
@@ -632,16 +644,107 @@ Si se quiere probar el proyecto o realizar modificaciones antes de ejecutar la i
 
   <img width="auto" src="./assets/img/SignUp.png"><br/>
 
-- **Completar registro**
 - **Interfaz de usuario**
+  
+  Una vez se haya registrado el usuario o iniciado sesion se encontrara con la siguiente interfaz, en la parte superior de la pantalla se encontra el nombre del usuario y la opcion de cerrar sesion. Luego en la parte inferior izquierda se encontra los usuarios que se han vinculado al chat y nos proporcionara el nombre y el email y si se encuentran conectados o no.
+
+  <img width="auto" src="./assets/img/FirstPage.png"><br/>
+  
 - **Envio de mensajes**
-- **Modificacion de datos**
 
-## Pruebas
+  Una vez el usuario seleccione una persona con quien quiera iniciar una conversación, en la parte derecha de la pantalla, especificamente en la parte inferior aparecera un campo para escribir un mensaje e iniciar una conversacion con la persona. 
 
-## Ejecución con docker
+  Si el usuario ya ha hablado con la persona anteriormente se cargaran los mensajes anteriores, en donde se mostraran datos como la fecha y hora del envio.
+  
+  <img width="auto" src="./assets/img/Chat.png"><br/>
 
-## Manuales
+------
+
+## Docker
+
+Debido a que era un requisito contenerizar el proyecto y que cualquier persona puediera utilizarlo facilmente se configuro algunos Dockerfile y un docker-compose para hacer esta tarea mas sencilla. A continuacion se explica mas a detalle sobre estos archivos.
+
+- ***`Dockerfile - chat_back`*** 
+  
+  Este archivo se puede encontrar en la carpeta ***chat_back*** del repositorio o para ir directamente a el pueden hacer click [aquí](https://github.com/GermanBejarano/ChatProject/blob/main/chat_backend/Dockerfile).
+
+  Este archivo contiene las instrucciones necesarias para crear la imagen del backend del proyecto, como se puede observar se creo en varias etapas para mejorar la implementacion, el peso final de la imagen y eliminar archivos innecesarios al montar la imagen en un contenerdor.
+
+  Si se requiere probar la compilación de la imagen basado en el ***Dockerfile*** puede ejecutar el comando `docker build --tag germanbejarano13/chat_back:1.0.0 .` y para ejecutarla o implementarla de forma facil en el contenedor puede ejecutar `docker container run germanbejarano13/chat_back:1.0.0` aunque se debe tener en cuenta las variables de entorno nombradas en el item **Configuración del entorno y ejecución** ya que son necesarias.
+
+  Si quiere saber mas información sobre la imagen generada y como ejecutarla correctamente puede visitar el repositorio de la imagen en [Docker Hub](https://hub.docker.com/repository/docker/germanbejarano13/chat_back/general).
 
 
+- ***`Dockerfile - chat_front`***
+  
+  Este archivo se puede encontrar en la carpeta ***chat_front*** del repositorio o para ir directamente a el pueden hacer click [aquí](https://github.com/GermanBejarano/ChatProject/blob/main/chat_frontend/Dockerfile).
 
+  Este archivo contiene las instrucciones necesarias para crear la imagen del frontend del proyecto, al igual que el Dockerfile del backend se creo en varias etapas para mejorar la implementacion, el peso final de la imagen y eliminar archivos innecesarios al montar la imagen en un contenerdor.
+
+  Si se requiere probar la compilación de la imagen basado en el ***Dockerfile*** puede ejecutar los mismos comandos que la imagen anterior `docker build --tag germanbejarano13/chat_front:1.0.0 .` y para ejecutarla en el contenedor puede ejecutar `docker container run germanbejarano13/chat_front:1.0.0`, tambien se debe tener en cuenta las variables de entorno nombradas en el item **Configuración del entorno y ejecución** ya que son necesarias.
+
+  Si quiere saber mas información sobre la imagen generada y como ejecutarla correctamente puede visitar el repositorio de la imagen en [Docker Hub](https://hub.docker.com/repository/docker/germanbejarano13/chat_front/general).
+
+
+- ***`Docker-Compose`***
+  
+  El docker compose es un archivo .yml el cual ayuda a simplificar las lineas de comando para leventar un proyecto que tiene varios servicios, en este se especifican cuales imagenes se necesitan, cuales son las variables de entorno a utilizar, por que puerto se va a lanzar cada servicio y muchas configuraciones mas.
+
+  Para este proyecto el ***docker-compose*** se compone de cuatro imagenes, todas almacenas en Docker Hub, dos de estas son creadas especialmente para este proyecto y las otras dos son imagenes oficiales de Docker Hub, pueden hacer click en cada imagen para que los redireccione a la documenacion oficial: 
+
+  - [_Mongo_](https://hub.docker.com/_/mongo)
+  - [_mongo-express_](https://hub.docker.com/_/mongo-express)
+  - [_germanbejarano13/chat_back_](https://github.com/GermanBejarano/ChatProject/blob/main/chat_frontend/Dockerfile)
+  - [_germanbejarano13/chat_front_](https://hub.docker.com/repository/docker/germanbejarano13/chat_front/general)
+
+  > [!IMPORTANT]
+  > La imagen de mongo-express no es necesaria para la ejecucion del proyecto, es solo una herramienta web que permite ver mas facilmente los datos de la base de datos.
+
+  Para ejecutar este proyecto es muy sencillo, simplemente descargan la carpeta ***chat_docker*** del proyecto y siguen los siguientes pasos:
+
+  - **Paso 1**: Crear dentro de la carpeta un archivo .env para manejar las variables de entorno que se necesitan para ejecutar el docker-compose. Se crea este archivo con el fin de mejorar la seguridad y los datos no queden expuestos a todo el mundo.
+  
+  - **Paso 2**: Se definen las siguientes variables de entorno dentro del .env:
+  
+    - `MONGO_USERNAME`: Usuario de la base de datos de mongo.
+    - `MONGO_PASSWORD`: Contraseña de la base de datos de mongo.
+    - `MONGO_DB_NAME`: Corresponde al nombre que se le da al servidor de mongo
+    - `BACK_PORT`: Corresponde al puerto donde el usuario quiere que se lance el servicio del backend.
+    - `FRONT_PORT`: Corresponde al puerto donde el usuario quiere que se lance el servicio del frontend.
+    - `JWT_KEY`: Corresponde a la llave para generar el token, el valor de la llave debe ser lo mas largo y complejo que pueda hacerse, con el fin de aumentar la seguridad.
+
+  - **Paso 3**: Una vez se asignan los valores solo queda abrir una terminal, ubicarse en la carpeta y ejecutar `docker compose up -d` para que los servicios suban, tener presente que se debe tener docker instalado y corriendo.
+  - **Paso 4**: Si quiere terminar o dar de baja todos los servicios/containers creados puede ejecutar `docker compose down`.
+
+-----
+
+## CI/CD
+
+Para este proyecto se realizo una implementación de integración continua y despliegue continuo (CI/CD), esto con el fin de agilizar los tiempos de compilación, despliegue y puesta en produccion de las imagenes en el repositorio de Docker Hub.
+
+Algunos beneficios de automatizar este proceso son: 
+
+- Ahorro de tiempo y de maquina al no realizar compilaciones de forma manual.
+- Nos quitamos el paso tedioso de subir la imagen al repositorio de Docker Hub de forma manual cada vez que se haga un cambio.
+- Nos evitamos estar consultando cual fue la ultima version subida y de acuerdo a eso poner el tag correspondiente, lo cual previene que haya errores humanos.
+
+**Pasos del CI/CD**
+
+A continuacion se mostrara los pasos que sigue el proceso de CI/CD para compilar y desplegar las imagenes de backend y frontend en el repositorio de Docker Hub. Si quiere ver mas a detalle el contenido del archivo puede observalo [aquí](https://github.com/GermanBejarano/ChatProject/blob/main/.github/workflows/docker-image.yml).
+
+<img width="auto" src="./assets/img/CI_CD.png"><br/>
+
+- ***Set up Job***: Indica que se inicio la tarea o la acción.
+  
+- ***Checkout code***: En este paso se esta verificando todo el codgo del repositorio con el cual se va a trabajar.
+- ***Git Semanntic Version***: Este paso es un plugin que ayuda con las versiones o el tagname que se les va a dar a las imagenes.  
+- ***Docker Login***: En este paso se realiza la autenticación a Docker Hub.
+- ***Build and push Docker Image - Backend***: En este se realiza la compilación de la imagen del backend basada en el Dockerfile que esta dentro del proyecto ***chat_backend***
+- ***Build and push Docker Image - Frontend***: En este se realiza la compilación de la imagen del frontend basada en el Dockerfile que esta dentro del proyecto ***chat_frontend***
+- ***Post Build and push Docker Image - Backend***: Se realiza el push de la imagen del backend creada en el paso anterior.
+- ***Post Build and push Docker Image - Frontend***: Se realiza el push de la imagen del frontend creada en el paso anterior.
+- ***Post Checkout code***: Limpia el cache y recursos.
+- ***Complete job***: Indica que se realizo la tarea con exito.
+
+> [!IMPORTANT]
+> Si llega a fallar el proceso en algun paso la imagen no se desplegara y dara un aviso al usuario para que se revise el fallo o error. 
