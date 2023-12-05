@@ -136,14 +136,12 @@ Para la segunta etapa se implementara, funciones tales como: modificación del p
 - Propietarios del software: Responsable de disponer los recursos para el desarrollo del sistema.
 - Usuarios Finales: Aquellos que utilizarán el sistema para la comunicación en tiempo real.
 
-<p align="center">
-  <a href="https://github.com/GermanBejarano/ChatProject">
-    <!-- <img width="160px" src="https://i.imgur.com/JIyBtKW.png"><br/> -->
-    <img width="160px" src="C:\Users\IS BRAAL\Desktop\img_cindy\Stakeholders_Desarrollador.png"><br/>
-    <img width="160px" src="C:\Users\IS BRAAL\Desktop\img_cindy\Stakeholders_propietario.png"><br/>
-    <img width="160px" src="C:\Users\IS BRAAL\Desktop\img_cindy\Stakeholders_usuario.png"><br/>
-  </a>
- </p>
+
+   
+    <img width="auto" src="./assets/img/Stakeholders_Desarrollador.png"><br/>
+    <img width="auto" src="./assets/img/Stakeholders_propietario.png"><br/>
+    <img width="auto" src="./assets/img/Stakeholders_usuario.png"><br/>
+ 
 
   
 ## Alcance
@@ -433,79 +431,18 @@ La Base de Datos puede ser consultada para almacenar o recuperar mensajes.
 
 Muestra la interacción entre los diferentes componentes del sistema en secuencia temporal, desde el envío de un mensaje por parte del cliente hasta su almacenamiento en la base de datos y la transmisión a otros clientes.
 
+- Diagrama de Secuencia Registro de Usuario
 
-<img width="auto" src="./assets/img/DiagramaSecuencia.png"><br/>
+  <img width="auto" src="./assets/img/Diagram_secuencia_registro.png"><br/>
 
-<pre>
-<code>
+- Diagrama de Secuencia Autenticación de Usuario
 
-+----------------------+        +---------------------+        +---------------------+       +----------------------+
-|        Usuario       |        | Cliente HTML/CSS   |        |   Cliente con        |       |       Servidor       |
-|                      |        | (Interfaz)          |        |      Socket         |       | (Node.js con Socket.io)|
-+----------------------+        +---------------------+        +---------------------+       +----------------------+
-         |                               |                                |                                |
-         |                               |                                |                                |
-         |                               |                                |                                |
-         |                               |                                |                                |
-         +-------- "Conexión al Chat" ---->|                              |                                |
-         |                               |                                |                                |
-         |                               |                                |                                |
-         |                               |                                |                                |
-         +-------- "Interacción en la    |                                |                                |
-         |           Interfaz"           |                                |                                |
-         |                               |                                |                                |
-         |                               |                                |                                |
-         |                               +--- "Envío de Mensaje" -------> |                                |
-         |                               |                                |                                |
-         |                               |                                |                                |
-         |                               +--- "Recepción de Mensaje" ---->|                                |
-         |                               |                                |                                |
-         |                               |                                |                                |
-         |                               +--- "Almacenar en Base de Datos"----->|                          |
-         |                               |                                |                                |
-         |                               |                                |                                |
-         |                               |                                |                                |
-         |                               |                                |                                |
-         |                               |                                |                                |
-         |                               |                                |                                |
-         |                               |                                |                                |
-         |                               |                                |                                |
-         |                               |                                |                                |
-         |                               |                                |                                |
-         |                               |                                |                                |
-         |                               |                                |                                |
-         |                               |                                |                                |
-         |                               |                                |                                |
-         |                               |                                |                                |
-         |                               |                                |                                |
-         |                               |                                |                                |
-         |                               |                                |                                |
-         +----- "Actualización en Tiempo |                                |                                |
-                |  Real de la Interfaz"  |                                |                                |
-                |                        |                                |                                |
-                +<--- "Actualización de  |                                |                                |
-                                         |  la Interfaz para Todos"       |                                |
-                                         |                                |                                |
-                                         +<--- "Actualización de Estado   |                                |
-                                         |   del Chat para Todos"         |                                |
-                                         |                                |                                |
-                                         +-------------------------------->|                               |
-                                         |                                |                                |
-                                         |                                +<--- "Envío a Cliente" ---------|
-                                         |                                |                                |
-                                         |                                +<--- "Envío a Cliente" ---------|
-                                         |                                |                                |
-                                         |                                +<--- "Envío a Cliente" ---------|
-                                         |                                |                                |
-                                         |                                +<--- "Envío a Cliente" ---------|
-                                         |                                |                                |
-                                         +<--- "Fin del Proceso" ---------|                                |
-                          
+  <img width="auto" src="./assets/img/Diagram_secuencia_autenticación.png"><br/>
 
+- Diagrama de Secuencia Envio de mensajes
 
+  <img width="auto" src="./assets/img/Diagram_secuencia_enviomsj.png"><br/>
 
-</code>
-</pre>
 
 ### Diagrama de despliegue
 
