@@ -108,11 +108,12 @@ Para la segunta etapa se implementara, funciones tales como: modificación del p
 
 ## Objetivos
 
-- Diseñar una plataforma de chat en tiempo real, que permita a los usuarios conectarse forma rápida y sin complicaciones.
-- Ofrecer una interfaz de usuario intuitiva y atractiva, desarrollada con reactjs, que garantice una experiencia de usuario positiva.
-- Facilitar la comunicación instantánea entre usuarios a través de la implementación de Socket.io para la transmisión de mensajes en tiempo real.
-- Almacenar de manera segura y eficiente los mensajes y datos de usuario en una base de datos MongoDb para garantizar la continuidad de las conversaciones.
-- Implementar medidas de seguridad robustas para proteger la integridad de los datos y garantizar la privacidad de los usuarios.
+-  Diseñar una plataforma de chat en tiempo real, que permita a los usuarios conectarse forma rápida y sin complicaciones.
+-  Ofrecer una interfaz de usuario intuitiva y atractiva, desarrollada con reactjs, que garantice una experiencia de usuario positiva.
+-  Facilitar la comunicación instantánea entre usuarios a través de la implementación de Socket.io para la transmisión de mensajes en tiempo real.
+-  Almacenar de manera segura y eficiente los mensajes y datos de usuario en una base de datos MongoDb para garantizar la continuidad de las conversaciones.
+-  Implementar medidas de seguridad robustas para proteger la integridad de los datos y garantizar la privacidad de los usuarios.
+
 
 **Beneficios Esperados:**
 
